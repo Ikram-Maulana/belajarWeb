@@ -6,6 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Halaman Table Pertama</title>
+  <style>
+    table.tstyle,
+    tr.tstyle,
+    th.tstyle,
+    td.tstyle {
+      border: 1px solid red;
+    }
+
+    /* border-collapse = collapse; akan sama dengan cellspacing */
+    table.tstyle {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th.tstyle {
+      height: 50px;
+    }
+
+    /* Kode dibawah akan sama seperti cellpadding */
+    th.tstyle,
+    td.tstyle {
+      padding: 15px;
+      text-align: left;
+    }
+
+    tr.tstyle:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* Memilih tr yang genap, genap(even), ganjil(odd) */
+    tr.tstyle:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
 </head>
 
 <body>
@@ -72,6 +106,29 @@
     </tr>
     <tr>
       <td>Sinatra</td>
+    </tr>
+  </table>
+  <br />
+
+  <!-- Mencoba Styling -->
+  <table class="tstyle">
+    <tr class="tstyle">
+      <th class="tstyle">Language</th>
+      <th class="tstyle">Framework</th>
+    </tr>
+    <tr class="tstyle">
+      <td rowspan="2" class="tstyle">PHP</td>
+      <td class="tstyle">Laravel</td>
+    </tr>
+    <tr class="tstyle">
+      <td class="tstyle">Codeigniter</td>
+    </tr>
+    <tr class="tstyle">
+      <td rowspan="2" class="tstyle">Ruby</td>
+      <td class="tstyle">Ruby on Rails</td>
+    </tr>
+    <tr class="tstyle">
+      <td class="tstyle">Sinatra</td>
     </tr>
   </table>
 </body>
