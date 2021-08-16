@@ -38,12 +38,21 @@
     .content {
       background-color: #ddd;
       min-height: 500px;
+      /* clear float */
+      overflow: auto;
     }
 
     .thumbnail {
       background-color: white;
       text-align: center;
       padding: 10px;
+      width: 225px;
+      margin: 10px;
+      float: left;
+    }
+
+    .thumbnail img {
+      width: 100%;
     }
 
     .footer {
@@ -68,6 +77,16 @@
     <div class="content">
       <h2>My Product</h2>
 
+      <div class="thumbnail">
+        <img src="http://via.placeholder.com/250x150" alt="Product">
+        <h2>Product 2</h2>
+        <p>Rp 250,000</p>
+      </div>
+      <div class="thumbnail">
+        <img src="http://via.placeholder.com/250x150" alt="Product">
+        <h2>Product 2</h2>
+        <p>Rp 250,000</p>
+      </div>
       <div class="thumbnail">
         <img src="http://via.placeholder.com/250x150" alt="Product">
         <h2>Product 2</h2>
