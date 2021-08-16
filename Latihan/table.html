@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Table Pertama</title>
+  <style>
+    table.tstyle,
+    tr.tstyle,
+    th.tstyle,
+    td.tstyle {
+      border: 1px solid red;
+    }
+
+    /* border-collapse = collapse; akan sama dengan cellspacing */
+    table.tstyle {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th.tstyle {
+      height: 50px;
+    }
+
+    /* Kode dibawah akan sama seperti cellpadding */
+    th.tstyle,
+    td.tstyle {
+      padding: 15px;
+      text-align: left;
+    }
+
+    tr.tstyle:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* Memilih tr yang genap, genap(even), ganjil(odd) */
+    tr.tstyle:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Table biasa -->
+  <table border="1">
+    <tr>
+      <th>Nama</th>
+      <th>Kota</th>
+      <th>Gol. Darah</th>
+    </tr>
+    <tr>
+      <td>Toni</td>
+      <td>Bandung</td>
+      <td>O</td>
+    </tr>
+    <tr>
+      <td>Amalia</td>
+      <td>Jakarta</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Lynda</td>
+      <td>Sukabumi</td>
+      <td>AB</td>
+    </tr>
+  </table>
+  <br />
+
+  <!-- Mencoba Colspan -->
+  <table border="1">
+    <tr>
+      <th>No</th>
+      <th colspan="2">Nama</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Ikram</td>
+      <td>Maulana</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Maulana</td>
+      <td>Ikram</td>
+    </tr>
+  </table>
+  <br />
+
+  <!-- Mencoba Rowspan -->
+  <table border="1" cellspacing="10" cellpadding="20">
+    <tr>
+      <th>Language</th>
+      <th>Framework</th>
+    </tr>
+    <tr>
+      <td rowspan="2">PHP</td>
+      <td>Laravel</td>
+    </tr>
+    <tr>
+      <td>Codeigniter</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Ruby</td>
+      <td>Ruby on Rails</td>
+    </tr>
+    <tr>
+      <td>Sinatra</td>
+    </tr>
+  </table>
+  <br />
+
+  <!-- Mencoba Styling -->
+  <table class="tstyle">
+    <tr class="tstyle">
+      <th class="tstyle">Language</th>
+      <th class="tstyle">Framework</th>
+    </tr>
+    <tr class="tstyle">
+      <td rowspan="2" class="tstyle">PHP</td>
+      <td class="tstyle">Laravel</td>
+    </tr>
+    <tr class="tstyle">
+      <td class="tstyle">Codeigniter</td>
+    </tr>
+    <tr class="tstyle">
+      <td rowspan="2" class="tstyle">Ruby</td>
+      <td class="tstyle">Ruby on Rails</td>
+    </tr>
+    <tr class="tstyle">
+      <td class="tstyle">Sinatra</td>
+    </tr>
+  </table>
+</body>
+
+</html>
