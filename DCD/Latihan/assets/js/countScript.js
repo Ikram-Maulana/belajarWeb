@@ -1,46 +1,46 @@
 // Ganti Nama
-let nameOf1 = document.getElementById("name1");
-let nameOf2 = document.getElementById("name2");
-let changeName1 = document.getElementById("change1");
-let changeName2 = document.getElementById("change2");
+let nameOfT1 = document.getElementById("nameOfTeam1");
+let nameOfT2 = document.getElementById("nameOfTeam2");
+let changenameOfTeam1 = document.getElementById("inputNameT1");
+let changenameOfTeam2 = document.getElementById("inputNameT2");
 
 // Count Angka
-let tambahBtn1 = document.getElementById("tambah1");
-let kurangBtn1 = document.getElementById("kurang1");
-let tambahBtn2 = document.getElementById("tambah2");
-let kurangBtn2 = document.getElementById("kurang2");
-let countElement1 = document.getElementById("count1");
-let countElement2 = document.getElementById("count2");
+let incrementBtnT1 = document.getElementById("incrementTeam1");
+let decrementBtnT1 = document.getElementById("decrementTeam1");
+let incrementBtnT2 = document.getElementById("incrementTeam2");
+let decrementBtnT2 = document.getElementById("decrementTeam2");
+let countScoreT1 = document.getElementById("scoreTeam1");
+let countScoreT2 = document.getElementById("scoreTeam2");
 
 // Inisiasi Score
 let score1 = 0;
 let score2 = 0;
 
-changeName1.addEventListener("input", function () {
-  nameOf1.innerHTML = changeName1.value;
+changenameOfTeam1.addEventListener("input", function () {
+  nameOfT1.innerHTML = changenameOfTeam1.value;
 });
-changeName2.addEventListener("input", function () {
-  nameOf2.innerHTML = changeName2.value;
-});
-
-tambahBtn1.addEventListener("click", function () {
-  countElement1.innerHTML = ++score1;
-});
-tambahBtn2.addEventListener("click", function () {
-  countElement2.innerHTML = ++score2;
+changenameOfTeam2.addEventListener("input", function () {
+  nameOfT2.innerHTML = changenameOfTeam2.value;
 });
 
-kurangBtn1.addEventListener("click", function () {
+incrementBtnT1.addEventListener("click", function () {
+  countScoreT1.innerHTML = ++score1;
+});
+incrementBtnT2.addEventListener("click", function () {
+  countScoreT2.innerHTML = ++score2;
+});
+
+decrementBtnT1.addEventListener("click", function () {
   if (score1 <= 0) {
-    countElement1.innerHTML = 0;
+    countScoreT1.innerHTML = 0;
   } else {
-    countElement1.innerHTML = --score1;
+    countScoreT1.innerHTML = --score1;
   }
 });
-kurangBtn2.addEventListener("click", function () {
+decrementBtnT2.addEventListener("click", function () {
   if (score2 <= 0) {
-    countElement2.innerHTML = 0;
+    countScoreT2.innerHTML = 0;
   } else {
-    countElement2.innerHTML = --score2;
+    countScoreT2.innerHTML = --score2;
   }
 });
