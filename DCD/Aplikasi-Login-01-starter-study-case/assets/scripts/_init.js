@@ -6,7 +6,7 @@ function showPopUp() {
   modalElement.classList.add('display');
 
   // menyembunyikan modal setelah 3 detik
-  setTimeout(function() {
+  setTimeout(function () {
     modalElement.classList.remove('display')
   }, 3000)
 }
@@ -18,5 +18,5 @@ function goToHome() {
 
 // pindah ke halaman login
 function goToLogin() {
-  location.href = './';
+  location.href = './index.html';
 }
