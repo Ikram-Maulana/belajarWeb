@@ -1,5 +1,5 @@
 // mendapatkan modal element dari DOM
-const modalElement = document.querySelector('#modal');
+const modalElement = document.getElementById('modal');
 
 // fungsi untuk menampilkan modal
 function showPopUp() {
