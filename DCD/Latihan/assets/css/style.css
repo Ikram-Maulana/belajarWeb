@@ -28,29 +28,29 @@
   margin-right: 20px;
 }
 
-#name1,
-#name2 {
+#nameOfTeam1,
+#nameOfTeam2 {
   font-size: 1.8em;
   font-weight: bold;
 }
 
-#tambah1,
-#tambah2,
-#kurang1,
-#kurang2 {
+#incrementTeam1,
+#incrementTeam2,
+#decrementTeam1,
+#decrementTeam2 {
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
 }
 
-.team1>div#count1,
-.team2>div#count2 {
+.team1>div#scoreTeam1,
+.team2>div#scoreTeam2 {
   font-size: 60px;
   font-weight: bold;
   margin: 20px 0px;
 }
 
-#change1,
-#change2 {
+#inputNameT1,
+#inputNameT2 {
   border: 0px;
 }
