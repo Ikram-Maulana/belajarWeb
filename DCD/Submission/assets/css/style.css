@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: #fff 80%;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.875em;
+  color: #333;
+  font-weight: 700;
+  line-height: 80px;
+  transition: all .5s;
+}
+
+.menu {
+  color: #666;
+}
+
+header>nav>.menu li {
+  line-height: 80px;
+}
+
+header>nav>.menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 12.5em;
+  justify-content: space-between;
+}
+
+header>nav>.menu ul li a {
+  color: #666;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: all .5s;
+}
+
+header>nav>.menu ul li a:hover {
+  font-weight: 700;
+  color: #23252f;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  height: 1.25em;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hamburger input {
+  margin: 0;
+  position: absolute;
+  width: 1.75em;
+  height: 1.75em;
+  opacity: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 1.75em;
+  height: 0.188em;
+  background-color: #333;
+  border-radius: 3px;
+}
+
+/* Content */
+
+main {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#content {
+  flex-basis: 70%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#content>h2 {
+  padding: 0 0 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.blog {
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.blog figure {
+  margin: 0;
+  flex-basis: 50%;
+}
+
+.blog img {
+  width: 22.5em;
+}
+
+.blog .isiBlog {
+  flex-basis: 45%;
+}
+
+.blog .isiBlog h3 {
+  margin: 0;
+}
+
+.blog .isiBlog p {
+  color: #666;
+  line-height: 21px;
+  margin: 5px 0 0 0;
+  width: 80%;
+  font-size: 0.8em;
+}
+
+.blog .isiBlog p.post {
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.blog .isiBlog p.post a {
+  font-weight: 700;
+  color: #23252f;
+}
+
+.blog .isiBlog button {
+  background-color: #23252f;
+  color: #fff;
+  margin-top: 10px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 3px;
+}
+
+.jarak {
+  margin-top: 24px;
+}
+
+aside {
+  flex-basis: 25%;
+  margin: 20px 0;
+  height: fit-content;
+}
+
+h2 {
+  color: #333;
+}
+
+.content p {
+  color: #666;
+}
+
+aside header h2 {
+  padding: 0 0 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+aside header figure {
+  text-align: center;
+}
+
+table {
+  text-align: left;
+}
+
+table th {
+  width: 100px;
+}
+
+aside button {
+  background-color: #23252f;
+  color: #fff;
+  margin-top: 10px;
+  padding: 14px 14px;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+}
+
+aside button a {
+  color: #fff;
+}
+
+/* Footer */
+
+footer {
+  background-color: #23252f;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.813em;
+}
+
+footer a {
+  color: #666;
+}
+
+footer a:hover {
+  color: #12c5c3;
+}
+
+footer .hearts {
+  color: red;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 759px) {
+  .blog {
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  .blog figure {
+    flex-basis: 100%;
+  }
+
+  .blog .isiBlog {
+    flex-basis: 100%;
+  }
+
+  .blog .isiBlog p.post {
+    margin: auto;
+  }
+
+  .blog .isiBlog p {
+    margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    font-size: 1.25em;
+    transition: all .5s;
+  }
+
+  header>nav>.menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    top: -1000%;
+    left: 0;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  header>nav>.menu ul.down {
+    top: 80px;
+  }
+
+  header>nav>.menu ul li a {
+    color: white;
+    font-size: 1.25em;
+  }
+
+  .hamburger {
+    display: flex;
+    top: 30px;
+  }
+
+  .blog img {
+    width: 15em;
+  }
+
+  aside {
+    overflow: auto;
+  }
+
+  aside figure {
+    margin: 0;
+  }
+}
