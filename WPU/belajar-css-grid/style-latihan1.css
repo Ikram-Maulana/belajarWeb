@@ -1,87 +1,56 @@
-html,
-body {
-  margin: 0;
+body,
+html {
   padding: 0;
-  border-color: #ddd;
+  margin: 0;
+  font-size: 20px;
+  font-family: Arial;
+  color: white;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-/* Columns dan Rows */
-/* .container {
-  width: 60%;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: 100px 25% 200px;
-  grid-template-rows: 100px;
-} */
-
-/* Implicit dan Explicit */
-/* .container {
-  width: 60%;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: 100px 50px;
-  grid-template-rows: 50px 100px 150px;
-  grid-auto-rows: 200px;
-} */
-
-/* grid-auto-flow */
-/* .container {
-  width: 60%;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: 100px 50px;
-  grid-auto-flow: column;
-  grid-auto-columns: 200px;
-} */
-
-/* Fractions */
-/* .container {
-  width: 60%;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr 3fr;
-} */
-
-/* Repeat() */
-/* .container {
-  width: 60%;
-  margin: 50px auto;
-  display: grid;
-  // grid-template-columns: repeat(9, 1fr); 
-  grid-template-columns: repeat(4, 1fr) repeat(5, 2fr);
-} */
-
-/* min-content() & max-content() */
-/* .container {
-  width: 60%;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-} */
-
-/* auto-fit & auto-fill */
-/* .container {
-  width: 60%;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 100px);
-} */
-
-/* minmax() */
 .container {
-  width: 60%;
+  width: 600px;
   margin: 50px auto;
+  border: 5px solid #333;
+  box-sizing: border-box;
+  padding: 5px;
   display: grid;
-  grid-template-columns: 1fr minmax(200px,300px) 1fr;
+  grid-template-areas: "header header"
+    "aside main"
+    "nav main"
+    "footer footer";
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1.3fr;
 }
 
-.item {
-  background-color: rgb(138, 209, 254);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header {
+  grid-area: header;
+  background-color: #B063D8;
+  padding: 40px 0;
 }
 
-.item:nth-child(even) {
-  background-color: rgb(255, 142, 142);
+aside {
+  grid-area: aside;
+  background-color: #2F93FF;
+  padding: 60px 0;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #E45765;
+  padding: 100px 0;
+}
+
+main {
+  grid-area: main;
+  background-color: #E0AA77;
+  box-sizing: border-box;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #666;
+  padding: 20px;
 }
