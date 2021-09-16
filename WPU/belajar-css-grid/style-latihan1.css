@@ -72,7 +72,7 @@ body {
   width: 60%;
   margin: 50px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr minmax(200px,300px) 1fr;
 }
 
 .item {
