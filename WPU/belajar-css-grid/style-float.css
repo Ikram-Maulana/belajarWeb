@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+}
+
+header {
+  width: 100vw;
+  background-color: rgb(211, 0, 211);
+  padding: 1em;
+}
+
+main {
+  overflow: auto;
+  clear: both;
+}
+
+.pinggir {
+  float: left;
+  width: 30%;
+}
+
+aside {
+  padding: 5.2em 0;
+  background-color: blue;
+}
+
+nav {
+  padding: 5.15em 0;
+  background-color: red;
+}
+
+.content {
+  float: right;
+  background-color: palegoldenrod;
+  width: 70%;
+  padding: 12em 0;
+}
+
+footer {
+  background-color: #333;
+  padding: 0.1em;
+}

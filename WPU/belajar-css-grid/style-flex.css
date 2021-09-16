@@ -1,0 +1,52 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+header {
+  background-color: purple;
+  padding: 2em 0;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  height: 500px;
+}
+
+.pinggir {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+
+aside {
+  flex-basis: 50%;
+  background-color: blue;
+  display: flex;
+}
+
+aside h1, nav h1, .content h1 {
+  margin: auto;
+}
+
+nav {
+  flex-basis: 50%; 
+  background-color: red;
+  display: flex;
+}
+
+.content {
+  flex-basis: 60%;
+  background-color: orangered;
+  display: flex;
+}
+
+footer {
+  background-color: #333;
+  padding: 0.4em;
+  text-align: center;
+}
+
