@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps - Ikram Maulana</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h2>Bookshelf Apps - Ikram Maulana</h2>
+  </header>
+  <main>
+    <div class="container card">
+      <h3>Tambahkan buku baru</h3>
+      <form action="#" id="bookForm">
+        <div class="inputan">
+          <label for="bookTitle">Judul</label>
+          <input type="text" id="bookTitle" required>
+        </div>
+        <div class="inputan">
+          <label for="bookAuthor">Penulis</label>
+          <input type="text" id="bookAuthor" required>
+        </div>
+        <div class="inputan">
+          <label for="bookYear">Tahun Terbit</label>
+          <input type="number" id="bookYear" required>
+        </div>
+        <div class="inputanInline">
+          <label for="isComplete">Selesai dibaca</label>
+          <input type="checkbox" name="isComplete" id="isComplete">
+        </div>
+        <button type="submit" id="bookSubmit">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
+      </form>
+    </div>
+    <aside>
+      <div class="search card">
+        <h3>Cari Judul Buku</h3>
+        <form action="#" id="searchBook">
+          <span class="pencarian">
+            <input type="search" name="searchTitle" id="searchTitle">
+            <button type="submit" id="searchBookSubmit">Cari</button>
+          </span>
+        </form>
+      </div>
+
+      <div class="not-complete card" id="uncompleteBook">
+        <h3>Belum selesai dibaca</h3>
+
+      </div>
+
+      </div>
+      <div class="complete card" id="completeBook">
+        <h3>Selesai dibaca</h3>
+
+      </div>
+    </aside>
+  </main>
+
+  <!-- Data.js disimpan paling atas karena function dari file ini digunakan oleh dua file dibawahnya -->
+  <script src="js/data.js" type="text/javascript"></script>
+  <script src="js/dom.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>

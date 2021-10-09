@@ -8,7 +8,7 @@
 function makeTodo(data, timestamp, isCompleted) {
 
   const textTitle = document.createElement("h2");
-  textTitle.innerText = data;
+  textTitle.innerText = "todo: " + data;
 
   const textTimestamp = document.createElement("p");
   textTimestamp.innerText = timestamp;
