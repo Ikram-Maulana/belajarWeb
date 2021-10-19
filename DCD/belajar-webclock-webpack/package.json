@@ -15,9 +15,9 @@
     "moment": "^2.29.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "babel-loader": "^8.2.2",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.1.0",
     "css-loader": "^6.4.0",
     "html-webpack-plugin": "^5.4.0",
     "http-server": "^13.0.2",
