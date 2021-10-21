@@ -123,28 +123,45 @@ function main() {
     // xhr.send(JSON.stringify(book));
   };
 
-  const removeBook = (bookId) => {
-    // tuliskan kode di sini!
-    const xhr = new XMLHttpRequest();
+  const removeBook = async (bookId) => {
+    try {
+      const option = {
+        method: "DELETE",
+        headers: {
+          "X-Auth-Token": "12345"
+        }
+      }
 
-    //menetapkan callback jika response sukses dan error
-    xhr.onload = function () {
-      const responseJson = JSON.parse(this.responseText);
+      const response = await fetch(`${baseUrl}/delete/${bookId}`, option);
+      const responseJson = await response.json();
+
       showResponseMessage(responseJson.message);
       getBook();
+    } catch (error) {
+      showResponseMessage(error);
     }
-    xhr.onerror = function () {
-      showResponseMessage();
-    }
+
+    // tuliskan kode di sini!
+    // const xhr = new XMLHttpRequest();
+
+    //menetapkan callback jika response sukses dan error
+    // xhr.onload = function () {
+    //   const responseJson = JSON.parse(this.responseText);
+    //   showResponseMessage(responseJson.message);
+    //   getBook();
+    // }
+    // xhr.onerror = function () {
+    //   showResponseMessage();
+    // }
 
     // Membuat DELETE request dan menetapkan target URL
-    xhr.open("DELETE", `${baseUrl}/delete/${bookId}`);
+    // xhr.open("DELETE", `${baseUrl}/delete/${bookId}`);
 
     // Mementapkan properti Content-Type dan X-Auth-Token pada Header request
-    xhr.setRequestHeader("X-Auth-Token", "12345");
+    // xhr.setRequestHeader("X-Auth-Token", "12345");
 
     // Mengirimkan request
-    xhr.send();
+    // xhr.send();
   };
 
 
