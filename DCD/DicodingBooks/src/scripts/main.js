@@ -2,50 +2,82 @@ function main() {
 
   const baseUrl = "https://web-server-book-dicoding.appspot.com";
 
-  const getBook = () => {
-    // tuliskan kode di sini!
-    const xhr = new XMLHttpRequest();
-
-    xhr.onload = function () {
-      const responseJson = JSON.parse(this.responseText);
+  const getBook = async () => {
+    // Fetch
+    try {
+      const response = await fetch(`${baseUrl}/list`);
+      const responseJson = await response.json();
       if (responseJson.error) {
         showResponseMessage(responseJson.message);
       } else {
         renderAllBooks(responseJson.books);
       }
-    }
-    xhr.onerror = function () {
-      showResponseMessage();
+    } catch (error) {
+      showResponseMessage(error);
     }
 
+    // tuliskan kode di sini!
+    // const xhr = new XMLHttpRequest();
+
+    // xhr.onload = function () {
+    //   const responseJson = JSON.parse(this.responseText);
+    //   if (responseJson.error) {
+    //     showResponseMessage(responseJson.message);
+    //   } else {
+    //     renderAllBooks(responseJson.books);
+    //   }
+    // }
+    // xhr.onerror = function () {
+    //   showResponseMessage();
+    // }
+
     // Membuat GET request dan menetapkan target URL
-    xhr.open("GET", `${baseUrl}/list`);
+    // xhr.open("GET", `${baseUrl}/list`);
     // Mengirimkan request
-    xhr.send();
+    // xhr.send();
   };
 
 
-  const insertBook = (book) => {
-    // tuliskan kode di sini!
-    const xhr = new XMLHttpRequest();
+  const insertBook = async (book) => {
+    // Fetch
+    try {
+      const option = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Auth-Token": "12345"
+        },
+        body: JSON.stringify(book)
+      }
 
-    xhr.onload = function () {
-      const responseJson = JSON.parse(this.responseText);
+      const response = await fetch(`${baseUrl}/add`, option);
+      const responseJson = await response.json();
       showResponseMessage(responseJson.message);
       getBook();
-    }
-    xhr.onerror = function () {
-      showResponseMessage();
+    } catch (error) {
+      showResponseMessage(error);
     }
 
-    xhr.open("POST", `${baseUrl}/add`);
+    // tuliskan kode di sini!
+    // const xhr = new XMLHttpRequest();
+
+    // xhr.onload = function () {
+    //   const responseJson = JSON.parse(this.responseText);
+    //   showResponseMessage(responseJson.message);
+    //   getBook();
+    // }
+    // xhr.onerror = function () {
+    //   showResponseMessage();
+    // }
+
+    // xhr.open("POST", `${baseUrl}/add`);
 
     // Mementapkan properti Content-Type dan X-Auth-Token pada Header request
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("X-Auth-Token", "12345");
+    // xhr.setRequestHeader("Content-Type", "application/json");
+    // xhr.setRequestHeader("X-Auth-Token", "12345");
 
     // Mengirimkan request dan menyisipkan JSON.stringify(book) pada body
-    xhr.send(JSON.stringify(book));
+    // xhr.send(JSON.stringify(book));
   };
 
   const updateBook = (book) => {
