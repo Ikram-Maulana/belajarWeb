@@ -1,0 +1,44 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* Styling pendukung */
+.wrapper div {
+    padding: 32px;
+    border: 1px solid black;
+}
+
+
+/* coloring */
+.box1, .box4 {
+    background-color: mediumseagreen;
+}
+
+
+.box2, .box6 {
+    background-color: steelblue;
+}
+
+
+.box3, .box5 {
+    background-color: gold;
+}
+
+/* Css Grid */
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.box2 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.box3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
