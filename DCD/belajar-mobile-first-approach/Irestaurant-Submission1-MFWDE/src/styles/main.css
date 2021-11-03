@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  color: #333333;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+}
+
+/* To Main */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: #C55A1B;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.5em;
+  background-color: #fff;
+  z-index: 99;
+  width: 17em;
+  margin: 0 auto;
+}
+
+.brand-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  flex-direction: column;
+  background-color: #333333;
+  height: 100vh;
+  top: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 2;
+  color: #fff;
+  width: 70%;
+  transform: translateX(-110%);
+  transition: all 1s;
+  opacity: 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-size: .8em;
+  padding: 1em;
+}
+
+header ul li a:hover {
+  color: #202020;
+  font-weight: 600;
+}
+
+header ul.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+header ul li a {
+  color: #fff;
+}
+
+header ul li a:visited {
+  color: #fff;
+}
+
+/* Toggle */
+.now {
+  color: #C55A1B !important;
+  font-weight: 600;
+}
+
+.now:hover {
+  color: #C55A1B;
+}
+
+/* Burger Menu */
+a#menu {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 600;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Jumbotron */
+.jumbotron {
+  width: 100vw;
+  height: 9.375em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px auto;
+  padding: 1em;
+  color: #fff;
+  z-index: 1;
+}
+
+.jumbotron h1 {
+  font-size: 1.5em;
+}
+
+.jumbotron p {
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+/* Main */
+main {
+  width: 17em;
+  margin: 1em auto 0;
+}
+
+main>h2 {
+  font-size: 0.9em;
+}
+
+/* Card */
+.cards {
+  margin: 1em auto 0;
+  text-align: left;
+}
+
+/* Card Item */
+.card-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card-item>img {
+  height: 12em;
+}
+
+.section-item {
+  padding: 1em;
+}
+
+.section-item>h3 {
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+.section-item>p {
+  margin-top: 1em;
+  font-size: 0.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+}
+
+.preview-item {
+  display: flex;
+}
+
+.preview-item>p {
+  margin-right: 1em;
+  font-size: 0.8em;
+}
+
+.preview-item>p>i {
+  margin-right: 0.5em;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  margin-top: 1em;
+  font-size: 0.8em;
+}
