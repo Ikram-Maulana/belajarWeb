@@ -2,7 +2,7 @@ import 'regenerator-runtime';
 import '../styles/style.css';
 import '../styles/responsive.css';
 // eslint-disable-next-line import/no-unresolved
-import App from './views/app';
+import App from './views/App';
 import swRegister from './utils/sw-register';
 import WebSocketInitiator from './utils/websocket-initiator';
 import CONFIG from './globals/config';
