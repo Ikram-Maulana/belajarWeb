@@ -1,5 +1,3 @@
-/* eslint-disable no-empty-function */
-/* eslint-disable no-unused-vars */
 import { openDB } from 'idb';
 import CONFIG from '../globals/config';
 
@@ -33,7 +31,15 @@ const FavoriteMovieIdb = {
     return (await dbPromise).delete(OBJECT_STORE_NAME, id);
   },
   async searchMovies(query) {
+    return (await this.getAllMovies()).filter((movie) => {
+      const loweredCaseMovieTitle = (movie.title || '-').toLowerCase();
+      const jammedMovieTitle = loweredCaseMovieTitle.replace(/\s/g, '');
 
+      const loweredCaseQuery = query.toLowerCase();
+      const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
+
+      return jammedMovieTitle.indexOf(jammedQuery) !== -1;
+    });
   },
 };
 
