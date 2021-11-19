@@ -68,7 +68,6 @@ Scenario('searching movies', async ({
   I.pressKey('Enter');
 
   const visibleLikedMovies = await I.grabNumberOfVisibleElements('.movie-item');
-  pause();
   assert.strictEqual(matchingMovies.length, visibleLikedMovies);
 
   matchingMovies.forEach(async (title, index) => {
