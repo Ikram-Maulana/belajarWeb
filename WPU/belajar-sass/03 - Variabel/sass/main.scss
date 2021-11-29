@@ -1,0 +1,89 @@
+//! CSS Variabel
+// :root {
+//   --primary-color: #f4f1de;
+//   --secondary-color: #f2cc8f;
+//   --text-color: #e07a5f;
+// }
+
+// body {
+//   background-color: var(--primary-color);
+// }
+
+// h1 {
+//   color: var(--text-color);
+// }
+
+//! SASS Variable
+// $primary-color: #f4f1de;
+// $secondary-color: #f2cc8f;
+// $text-color: #e07a5f;
+
+// body {
+//   background-color: $primary-color;
+// }
+
+// h1 {
+//   color: $text-color;
+// }
+
+//! Perilaku sass 1 adalah pemisah selector "-" dan "_" itu sama saja
+// $primary-color: #f4f1de;
+// $secondary-color: #f2cc8f;
+// $text-color: #e07a5f;
+
+// body {
+//   background-color: $primary_color;
+// }
+
+// h1 {
+//   color: $text-color;
+// }
+
+//! Perilaku sass 2 adalah memiliki varibel scope global dan local
+// $secondary-color: #f2cc8f;
+// $text-color: #e07a5f;
+
+// body {
+//   //! ini hanya akan bisa dipakai body dan turunannya
+//   // $primary-color: #f4f1de;
+  
+//   //! cara membuat variable global di dalam selector
+//   $primary-color: #f4f1de !global; 
+//   background-color: $primary_color;
+// }
+
+// h1 {
+//   color: $text-color;
+// }
+
+//! apabila ada variabel yang sama dengan scope berbeda maka akan berbeda
+// $secondary-color: #f2cc8f;
+// $text-color: #e07a5f;
+// $primary-color: green;
+
+// body {
+//   // $primary-color: #f4f1de;
+
+//   //! apabila variabel local ditambah global maka akan menimpa variabel global sebelumnya
+//   $primary-color: #f4f1de !global; 
+//   background-color: $primary_color;
+// }
+
+// h1 {
+//   color: $primary-color;
+// }
+
+//! menyimpan beberapa nilai pada 1 variabel menggunakan map-get
+// $alert-danger: red;
+// $alert-warning: orange;
+// $alert-success: green;
+
+$alert: (
+  'danger': red,
+  'warning': orange,
+  'success': green
+);
+
+h1 {
+  color: map-get($alert, 'success');
+}
