@@ -1,0 +1,68 @@
+//! Base
+$warna-dasar: salmon;
+h1 {
+  color: $warna-dasar;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+//! Built-in Modules: Color
+/* adjust-color($color, $red: null, $green: null, $blue: null, $hue: null, $saruration: null, $lightness: null, $whiteness: null, $blackness: null, $alpha: null)
+*/
+h1 {
+  // color: adjust-color($color: $warna-dasar, $green: 100, $blue: 100, $red: -50);
+}
+
+//! adjust-hue($color, $degree) -> roda warna atau color wheel
+//! positif berlawanan jarum jam, negatif searah jarum jam 
+h1 {
+  // color: adjust-hue($color: $warna-dasar, $degrees: 30deg);
+}
+
+//! complement($color) -> mencari warna yang bersebrangan
+h1 {
+  // color: complement($color: $warna-dasar);
+}
+
+//! darken($color, $amount
+h1 {
+  // color: darken($color: $warna-dasar, $amount: 20%)
+}
+
+//! lighten($color, $amount)
+h1 {
+  // color: lighten($color: $warna-dasar, $amount: 20%);
+} 
+
+//! saturate($color, $amount) -> menambahkan warna
+h1 {
+  // color: saturate($color: $warna-dasar, $amount: 30%);
+} 
+
+//! desaturate($color, $amount) -> menghilangkan warna
+h1 {
+  // color: desaturate($color: $warna-dasar, $amount: 50%);
+}
+
+//! grayscale($color)
+h1 {
+  // color: grayscale($color: $warna-dasar);
+} 
+
+//! mix($color1, color2, $weight: 50%) -> menyampurkan 2 warna 
+h1 {
+  // color: mix($warna-dasar, blue, 80%);
+}
+
+//! Fade-in($color, $amount) -> membuat element yang transparan menjadi solid
+h1 {
+  //! 0.2 + 0.5 = 0.7 
+  // color: fade-in(rgba(250, 128, 114, 0.2), 0.5);
+}
+
+//! fade-out() -> membuat element solid menjadi transparant 
+h1 {
+  //! 1 - 0.4 = 0.6 
+  color: fade-out($color: $warna-dasar, $amount: 0.4);
+}
