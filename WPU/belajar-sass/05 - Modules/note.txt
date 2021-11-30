@@ -8,7 +8,7 @@ header, footer, container bisa dipisah agar modular lalu import di main
 
 atau kita bisa menambahkan folder modules agar lebih modular
 
-import bisa dijadikan sebarin
+import bisa dijadikan sebaris
 
 kekurangan menggunakan import: 
 - https://sass-lang.com/documentation/at-rules/import
