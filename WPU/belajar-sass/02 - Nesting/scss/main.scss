@@ -1,0 +1,62 @@
+//! nesting seperti biasa
+// main {
+//   background-color: lightblue;
+
+//   .main-heading {
+//     font-size: 2em;
+//   }
+
+//   .main-paragraph {
+//     font-size: 1.4em;
+//   }
+// }
+
+//! hasil akhir main h1, main p, footer h1, footer p 
+// main, footer {
+//   h1, p {
+//     letter-spacing: 1px;
+//   }
+// }
+
+//! & -> parent selector
+//! & yang ditulis sekarang mengacu pada main
+// main {
+//   .container & {
+//     background-color: lightblue;
+//   }
+
+//   .main-heading {
+//     font-size: 2em;
+//   }
+
+//   &:hover {
+//     background-color: salmon;
+//   }
+// }
+
+//! fungsi & untuk mengganti nama selektor
+//! main biar ada . pake class
+.main {
+  // & &-heading {
+  //! coba pakai interpolasi
+  #{&}-heading {
+    font-size: 2em;
+  }
+
+  // & &-paragraph{
+  #{&}-paragraph {
+    font-size: 1.4em;
+  }
+}
+
+.footer {
+  // & &-heading {
+  #{&}-heading {
+    font-size: 2em;
+  }
+
+  // & &-paragraph {
+  #{&}-paragraph {
+    font-size: 1.4em;
+  } 
+}

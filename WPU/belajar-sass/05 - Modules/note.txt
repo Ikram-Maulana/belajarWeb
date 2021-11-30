@@ -1,0 +1,19 @@
+@import -> keyword / fitur yang sudah cukup lama
+@use -> disarankan
+
+1. menggunakan "_" untuk menandakan bertipe parsial
+2. file yang menggunakan "_" didepannya tidak akan melalui proses kompilasi
+
+header, footer, container bisa dipisah agar modular lalu import di main
+
+atau kita bisa menambahkan folder modules agar lebih modular
+
+import bisa dijadikan sebaris
+
+kekurangan menggunakan import: 
+- https://sass-lang.com/documentation/at-rules/import
+
+- @use hanya bisa digunakan oleh dart sass, tidak bisa oleh extension vscode karena libsass
+- kalau use import di scss yang membutuhkannya
+- untuk pemanggilannya ga boleh langsung tapi harus pake namespace
+- bisa pake alias

@@ -1,0 +1,13 @@
+//! cara 1 import 
+// @import 'modules/mixin';
+// @import 'modules/header';
+// @import 'modules/container';
+// @import 'modules/footer';
+
+// @import 'modules/mixin', 'modules/header', 'modules/container', 'modules/footer';
+
+//! cara 2 import
+//! Import mixin di header biar ga error
+@use 'modules/header';
+@use 'modules/container';
+@use 'modules/footer';
